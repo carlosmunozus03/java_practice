@@ -33,15 +33,22 @@ class Employee {
 
     public double increaseSalary(double percentage) {
         double increase = salary * percentage / 100;
-        double newSalary = increase;
+        double newSalary = increase + salary;
         return newSalary;
     }
 }
 
 public class Employee_2_Main {
     public static void main(String[] args) {
-        Employee employee1 = new Employee("Daniela", 60000, 2020, 4, 12);
-        Employee employee2 = new Employee("Patrick", 50000, 2021, 6, 15);
+        Employee[] employees = new Employee[2];
+
+        employees[0] = new Employee("Daniela", 60000, 2020, 4, 12);
+        employees[1] = new Employee("Patrick", 50000, 2021, 6, 15);
+
+        for (Employee employee : employees) {
+            System.out.println("Name: " + employee.getName() + " Salary: " + employee.getSalary() + " End of " +
+                    "contract: " + employee.getEndContract() + " Increase salary: " + employee.increaseSalary(15));
+        }
 
     }
 }
