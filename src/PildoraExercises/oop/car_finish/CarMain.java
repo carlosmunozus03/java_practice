@@ -10,5 +10,7 @@ public class CarMain {
         System.out.println(car.getClimateControl() + " and " + car.getLeatherSeats());
         System.out.println("Weight increase to: " + car.getFinalWeight()+" Kg.");
         System.out.println("Final price: $" + car.price());
+        System.out.println();
+
     }
 }
